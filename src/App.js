@@ -1,62 +1,61 @@
 import { useState, useEffect } from "react";
-/* import Header from "./components/Header"; */
+import Header from "./components/Header";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import What from "./components/What";
+/* import What from "./components/What"; */
 import Notfound from "./components/NotFound";
 import Start from "./components/Start";
-import How from "./components/How";
+import Quote from "./components/Quote";
+import axios from "axios";
+import Picture from "./components/Picture";
 
 function App() {
-  const [hideText, setHideText] = useState("none");
-  const [knowsAnswer, setKnowsAnswer] = useState(false);
+/*   const [hideText, setHideText] = useState("none");
+  const [knowsAnswer, setKnowsAnswer] = useState(false); */
+  const [quote, setQuote] = useState([])
+ 
 
-  useEffect(() => {
-    const url = "https://api.fisenko.net/quotes"
+  
 
-    const fetchData = async () => {
-      try {
-        const res = await fetch(url)
-        const data = await res.json()
-        console.log(data)
-      } catch (error){
-        console.log("Something is not right...", error)
-      }
+  const url = "https://cors-anywhere.herokuapp.com/https://api.fisenko.net/quotes"
+  const fetchData = () => {
+      axios.get(url).then(res => {
+        setQuote(res.data)
+      }).catch(error => {
+        console.log("something is wrong...", error)
+      })
     }
 
-    fetchData()
+  useEffect(() => {
+    fetchData()  
   }, [])
 
   
  
 
-  const displayText = () => {
+/*   const displayText = () => {
     setHideText("block");
   };
   const highlightNext = () => {
     setKnowsAnswer(true);
-  };
+  }; */
 
 
   return (
     <Router>
       <div className="App">
-{/*         <Header
-        changeColor={colorChange} /> */}
+        
+      <Header /> 
         <main>
           <Switch>
             <Route exact path="/">
               <Start />
             </Route>
-            <Route path="/what">
-              <What
-                showTools={displayText}
-                hideText={hideText}
-                ontoNext={highlightNext}
-                knowsAnswer={knowsAnswer}
-              />
+            <Route exact path="/quote">
+              <Quote
+              quote={quote} />
             </Route>
-            <Route exact path="/how">
-              <How />
+            <Route exact path="/picture">
+              <Picture/>
             </Route>
             <Route path="*">
               <Notfound />

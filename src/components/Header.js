@@ -1,9 +1,12 @@
-import ColorBox from "./ColorBox";
+import { Link } from "react-router-dom";
+
 
 const Header = () => {
   return (
     <header>
-      <ColorBox />
+       <button className="home-btn">
+          <Link to="/">Home</Link>
+        </button>
     </header>
   );
 };

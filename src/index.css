@@ -205,43 +205,42 @@ input[type="color"]:hover {
 
 /****What****/
 
-.what,
-.how {
+.picture,
+.quote {
   padding: 1em;
   text-align: center;
 }
 
-.what div {
-  padding: 0.5em;
-}
 
-.what p,
-.how p {
+.picture p,
+.quote p {
   margin: 1em;
 }
 
 
 
-.what-btns {
-  display: flex;
-  justify-content: center;
-  margin: -2em;
-}
-.next-btns {
-  display: flex;
-  justify-content: space-between;
-}
+
+
 
 .next-btns a {
   color: white;
   font-weight: 700;
 }
 
-/********How************/
-.how-btns {
-  display: flex;
-  justify-content: space-evenly;
+.home-btn {
+  background-color: white;
+  border: none;
+  font-family: Pacifico;
+ 
 }
+
+.home-btn a {
+  color: orange;
+  font-size:1.9em ;
+}
+
+/********Quote************/
+
 
 .displaying {
   display: block;

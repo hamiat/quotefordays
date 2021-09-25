@@ -11,7 +11,7 @@ const Start = () => {
         </p>
       </div>
       <button className="btn-3d green start-btn">
-        <Link to="/what">Start!</Link>
+        <Link to="/quote">Start!</Link>
       </button>
     </section>
   );
