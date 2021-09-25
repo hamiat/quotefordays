@@ -1,0 +1,261 @@
+:root {
+  --base: #9fdae7;
+  --btnColor: #313131;
+}
+
+@font-face {
+  font-family: "Pacifico";
+  src: url("/src/assets/Pacifico.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+a,
+button {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+p {
+  font-size: 1.3em;
+}
+
+.App {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 100px auto;
+}
+
+main {
+  grid-column: 1 / span 5;
+  grid-row: 2;
+  margin: 1em 2.5em 1em 1.5em;
+  border: 2px solid var(--base);
+  box-shadow: 5px 5px 5px var(--base);
+  border-radius: 5px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto;
+}
+
+.hidden {
+  display: none;
+}
+
+/***buttons***/
+.btn-gradient {
+  text-decoration: none;
+  color: white;
+  border: 1px solid rgba(0, 0, 0, 0.21);
+  border-bottom: 4px solid rgba(0, 0, 0, 0.21);
+  border-radius: 4px;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+  margin: 30px 0;
+  font-size: 0.9em;
+}
+
+.btn-gradient.green {
+  background: linear-gradient(
+    to bottom,
+    rgba(130, 200, 160, 1) 0%,
+    rgba(124, 185, 149, 1) 100%
+  );
+  padding: 0.5em 1em;
+}
+.btn-gradient.yellow {
+  background: linear-gradient(
+    rgba(240, 210, 100, 1) 0%,
+    rgba(229, 201, 96, 1) 100%
+  );
+  padding: 0.5em 1em;
+}
+.btn-gradient.cyan {
+  background: linear-gradient(
+    rgba(27, 188, 194, 1) 0%,
+    rgba(24, 163, 168, 1) 100%
+  );
+  padding: 0.1em 0.3em;
+  margin-right: 1em;
+}
+.btn-gradient.orange {
+  background: linear-gradient(
+    rgba(255, 105, 30, 1) 0%,
+    rgba(230, 95, 28, 1) 100%
+  );
+  padding: 0.1em 0.3em;
+}
+
+.btn-3d a {
+ color: rgb(141, 85, 0); 
+  font-family: Pacifico;
+  font-size: 1.5em;
+}
+
+.btn-3d a:active {
+  color: orange;
+}
+
+.btn-3d {
+  grid-column: 3 / span 1;
+
+  font-size: 1.2em;
+  padding: 0.5em 2em;
+
+  margin: 2em;
+  margin-bottom: 3em;
+  border-radius: 6px;
+  transition: top 0.01s linear;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+  border: 1px solid grey;
+}
+
+.btn-3d.green:hover {
+  background-color:  var(--base);
+}
+
+.btn-3d:active {
+  top: 9px;
+}
+.btn-3d.green {
+  background-color: var(--base);
+  box-shadow: 0 0 0 1px  var(--base) inset, 0 0 0 2px rgb(255 255 255 / 15%) inset, 0 8px 0 0 rgb(102 164 178 / 60%), 0 8px 0 1px rgb(0 0 0 / 40%), 0 8px 8px 1px rgb(0 0 0 / 50%);
+}
+.btn-3d.green:active {
+	box-shadow: 0 0 0 1px  var(--base) inset,
+				0 0 0 2px rgba(255,255,255,0.15) inset,
+				0 0 0 1px rgba(0,0,0,0.4);
+}
+
+
+.bigger {
+  font-size: 2em;
+  transition: all 0.7s ease;
+}
+.smaller {
+  height: 50%;
+  padding: 3px 5px;
+  transition: all 0.7s ease;
+}
+
+/****Header****/
+
+header {
+  grid-column: 2 / span 3;
+  grid-row: 1;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 2em;
+}
+
+input[type="color"] {
+  border-color: transparent;
+  background-color: transparent;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+input[type="color"]:hover {
+  border-color: red;
+  border-radius: 20px;
+}
+
+/****Start****/
+.start {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+}
+
+.welcome {
+  margin-top: 2em;
+  padding: 0 2em;
+  text-align: center;
+}
+
+ h1 {
+  color: orange;
+  font-family: Pacifico;
+  font-size: 1.9em;
+}
+
+.welcome h1 {
+  color: orange;
+  font-family: Pacifico;
+  font-size: 3em;
+}
+
+.welcome p {
+  margin: 1em 0;
+}
+
+/****What****/
+
+.what,
+.how {
+  padding: 1em;
+  text-align: center;
+}
+
+.what div {
+  padding: 0.5em;
+}
+
+.what p,
+.how p {
+  margin: 1em;
+}
+
+
+
+.what-btns {
+  display: flex;
+  justify-content: center;
+  margin: -2em;
+}
+.next-btns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.next-btns a {
+  color: white;
+  font-weight: 700;
+}
+
+/********How************/
+.how-btns {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.displaying {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+/*desktop*/
+@media screen and (min-width: 840px) {
+  main {
+    grid-column: 2 / span 3;
+    grid-row: 2;
+    margin: 1em;
+  }
+}
