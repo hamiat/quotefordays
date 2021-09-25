@@ -7,6 +7,10 @@
   font-family: "Pacifico";
   src: url("/src/assets/Pacifico.ttf");
 }
+@font-face {
+  font-family: "Nunito";
+  src: url("/src/assets/nunito.ttf")
+}
 
 * {
   margin: 0;
@@ -27,6 +31,7 @@ button {
 
 p {
   font-size: 1.3em;
+  font-family: Nunito;
 }
 
 .App {
@@ -98,7 +103,7 @@ main {
 }
 
 .btn-3d a {
- color: rgb(141, 85, 0); 
+  color: rgb(141, 85, 0);
   font-family: Pacifico;
   font-size: 1.5em;
 }
@@ -122,7 +127,7 @@ main {
 }
 
 .btn-3d.green:hover {
-  background-color:  var(--base);
+  background-color: var(--base);
 }
 
 .btn-3d:active {
@@ -130,14 +135,14 @@ main {
 }
 .btn-3d.green {
   background-color: var(--base);
-  box-shadow: 0 0 0 1px  var(--base) inset, 0 0 0 2px rgb(255 255 255 / 15%) inset, 0 8px 0 0 rgb(102 164 178 / 60%), 0 8px 0 1px rgb(0 0 0 / 40%), 0 8px 8px 1px rgb(0 0 0 / 50%);
+  box-shadow: 0 0 0 1px var(--base) inset,
+    0 0 0 2px rgb(255 255 255 / 15%) inset, 0 8px 0 0 rgb(102 164 178 / 60%),
+    0 8px 0 1px rgb(0 0 0 / 40%), 0 8px 8px 1px rgb(0 0 0 / 50%);
 }
 .btn-3d.green:active {
-	box-shadow: 0 0 0 1px  var(--base) inset,
-				0 0 0 2px rgba(255,255,255,0.15) inset,
-				0 0 0 1px rgba(0,0,0,0.4);
+  box-shadow: 0 0 0 1px var(--base) inset,
+    0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 0 0 1px rgba(0, 0, 0, 0.4);
 }
-
 
 .bigger {
   font-size: 2em;
@@ -187,7 +192,7 @@ input[type="color"]:hover {
   text-align: center;
 }
 
- h1 {
+h1 {
   color: orange;
   font-family: Pacifico;
   font-size: 1.9em;
@@ -211,16 +216,10 @@ input[type="color"]:hover {
   text-align: center;
 }
 
-
 .picture p,
 .quote p {
   margin: 1em;
 }
-
-
-
-
-
 
 .next-btns a {
   color: white;
@@ -231,16 +230,14 @@ input[type="color"]:hover {
   background-color: white;
   border: none;
   font-family: Pacifico;
- 
 }
 
 .home-btn a {
   color: orange;
-  font-size:1.9em ;
+  font-size: 1.9em;
 }
 
 /********Quote************/
-
 
 .displaying {
   display: block;

@@ -6,8 +6,8 @@ const Start = () => {
       <div className="welcome">
         <h1>Welcome!</h1>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi auctor
-          mi nulla. Maecenas et rhoncus diam. Nulla mattis suscipit fringilla.
+          This project was by a student at Hyper Island, for created the purpose of learning React.
+          What the project itself is, I am not sure but I hope that it keeps you entertained for brief while.
         </p>
       </div>
       <button className="btn-3d green start-btn">
