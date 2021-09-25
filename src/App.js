@@ -6,13 +6,12 @@ import Notfound from "./components/NotFound";
 import Start from "./components/Start";
 import How from "./components/How";
 
-
 function App() {
   const [hideText, setHideText] = useState("none");
   const [knowsAnswer, setKnowsAnswer] = useState(false);
 
   useEffect(() => {
-    const url = "/quotes"
+    const url = "https://api.fisenko.net/quotes"
 
     const fetchData = async () => {
       try {
